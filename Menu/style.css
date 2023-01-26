@@ -22,4 +22,15 @@ nav:nth-child(2){
     top: 0;
     left: 0;
     height: 3px;
+    transition: 0.5s;
+}
+
+#vertical-underline{
+    position: absolute;
+    width: 0;
+    background-color: skyblue;
+    top: 0;
+    left: 0;
+    height: 3px;
+    transition: 0.5s;
 }
