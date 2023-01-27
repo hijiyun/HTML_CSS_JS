@@ -15,7 +15,7 @@ function horizontalIndicator(e) {
 }
 
 verticalMenus.forEach((menu) => {
-    menu.addEventListener("click", (e) => verticalIndicator(e));
+    menu.addEventListener( "click", (e) => verticalIndicator(e));
 });
 function verticalIndicator(e) {
     verticalUnderline.style.left = e.currentTarget.offsetLeft + "px";
