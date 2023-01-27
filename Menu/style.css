@@ -2,7 +2,7 @@ nav a{
     text-decoration: none;
     color: black;
     margin: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif ;
 }
 
 nav:first-child{
