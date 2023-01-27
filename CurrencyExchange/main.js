@@ -61,8 +61,8 @@ function convert() {
     // 얼마를 환전? 가지고 있는 돈이 뭔지?
     // 돈 * 환율 = 환전금액
     let amount = document.getElementById("from-input").value;
-    console.log("amount", amount);
-    let convertedAmount = amount * currencyRatio[fromcurrency][tocurrency];
+    // console.log("amount", amount);
+    let convertedAmount = amount*currencyRatio[fromcurrency][tocurrency];
     console.log("환전결과", convertedAmount);
     document.getElementById("to-input").value = convertedAmount;
 }
