@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js"></script>
+  <style>
+    div{
+      background-color: red;
+      width: 100px;
+      height: 100px;
+    }
+    #one{
+      position: relative;
+      background-color: aqua;
+      width: 100px;
+      height: 100px;
+    }
+    #two{
+      position: absolute;
+      background-color: bisque;
+      left: 12px;
+      top: 24px;
+    }
+    #wrapper{
+      margin-left: 100px;
+      position: relative;
+      height: auto;
+      border: 10px solid green;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+  </div>
+</body>
+</html>
