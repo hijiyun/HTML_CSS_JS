@@ -1,0 +1,84 @@
+.title{
+        line-height: 110%;
+    }
+
+    .text-area {
+        margin-top: 90px;
+        margin-left: 24px;
+    }
+
+    .line{
+        width: 46px;
+        height: 1px;
+        background-color: red;
+        display: inline-block;
+        position: relative;
+        top: -7px;
+        opacity: 0.2;
+        background-color: rgb(138, 97, 97);
+    }
+
+    .text-area h1 {
+        margin-bottom: 22px;
+    }
+
+    .volume{
+        margin-bottom: 85px;
+    }
+
+    #circle-wrapper{
+        position: relative;
+        margin-left: 24px;
+        margin-top: 42px;
+    }
+
+    .circle{
+        width: 246px;
+        height: 246px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        transition: 1s;
+    }
+
+    .circle:nth-child(1){
+        background-color: transparent;
+        border: 1px solid black;
+        opacity: 0.2;
+    }
+
+    .circle:nth-child(2){
+        background-color: rgb(128, 123, 123);
+        left: 100px;
+    }
+
+    .circle:nth-child(3){
+        background-color: rgb(49, 49, 49);
+        left: 200px;
+        transition: 1s;
+        }
+
+    .circle:hover{
+        background-color: pink;
+        top: -20px;
+    }
+
+    .circle:nth-child(3):active{
+        background-color: antiquewhite;
+    }
+
+    #badge{
+        background-color: rgb(49, 49, 49);
+        width: 56px;
+        height: 56px;
+        color: rgb(255, 226, 231);
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 9px;
+        line-height: 11px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        right: 24px;
+        font-weight: bold;
+    }
