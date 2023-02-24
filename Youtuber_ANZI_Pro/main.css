@@ -31,7 +31,7 @@ li{
 }
 
 input{
-    background-color: rgba(160, 159, 159, 0.3);
+    background-color: rgba(255, 210, 210, 0.7);
     border: none;
     height: 30px;
     border-radius: 8px;
@@ -43,7 +43,7 @@ input{
 
 input:focus{
     outline: none;
-    background-color: rgba(255, 210, 210, 0.7);
+    background-color: rgba(219, 131, 131, 0.3);
 }
 
 input::placeholder{
