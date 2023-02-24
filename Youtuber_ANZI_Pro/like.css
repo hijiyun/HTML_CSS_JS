@@ -1,9 +1,17 @@
 .search{
     margin: 20px;
+    position: relative;
 }
 
 .search input{
     width: 100%;
+}
+
+.search .search-icon{
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    opacity: 0.3;
 }
 
 .text-area{
