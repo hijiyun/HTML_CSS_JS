@@ -50,3 +50,11 @@ input::placeholder{
     color: rgba(255,255,255,0.7);
     text-align: center;
 }
+
+button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(138, 97, 97);
+    font-size: 15px;
+}

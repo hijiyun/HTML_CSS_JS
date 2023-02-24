@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.search form{
+    display: flex;
+}
+
 .search input{
     width: 100%;
 }
