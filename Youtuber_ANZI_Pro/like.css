@@ -7,12 +7,29 @@
     display: flex;
 }
 
-.search input{
+.search .search-field{
     width: 100%;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.search .search-field:focus {
+    flex-shrink: initial;
+}
+
+.search .search-field:focus ~ .cancel-btn{
+    opacity: 1;
+}
+
+.search .cancel-btn{
+    flex-shrink: 0;
+    margin-left: 20px;
+    opacity: 0;
+    transition: 0.15s;
 }
 
 .search .search-icon{
-    position: absolute;
+    position: absolute; 
     top: 5px;
     left: 12px;
     opacity: 0.3;
