@@ -67,6 +67,7 @@ sup{
 
 /* Pseudo element */
 /* 요것을 쓸려면 무조건 content:""; <-를 무조건 써야 함 */
+/*
 .item::after{
     content: "";
     width: 100%;
@@ -84,6 +85,7 @@ sup{
 .item:active::after{
     background-color: rgba(0,0,0,0.2);
 }
+*/
 
 /*리스트 시작*/
 .list .num{
