@@ -1,3 +1,13 @@
+@keyframes circleShow{
+    from {
+        opacity: 0;
+        transform: translateX(0);
+    } to{
+        opacity: 1;
+        transform: translateX(86px);
+    }
+}
+
 .title{
         line-height: 110%;
     }
@@ -39,6 +49,7 @@
         position: absolute;
         top: 0;
         transition: 1s;
+        animation-name: circleShow 0.05s;
     }
 
     .circle:nth-child(1){
