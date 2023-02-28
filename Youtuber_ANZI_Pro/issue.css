@@ -18,6 +18,7 @@
     bottom: 46px;
     left: 24px;
     font-family: Georgia, 'Times New Roman', Times, serif ;
+    animation: showText 1s;
 }
 
 .featured .title{

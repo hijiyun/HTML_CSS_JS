@@ -1,20 +1,31 @@
 @keyframes circleShow{
     from {
         opacity: 0;
-        transform: translateX(0);
+        transform: translateY(100px) scale(0.5);
+        background-color: rgba(233, 126, 255, 0.74);
     } to{
         opacity: 1;
-        transform: translateX(86px);
+        transform: translateY(0) scale(1);
     }
 }
 
 .title{
-        line-height: 110%;
+    line-height: 110%;
     }
 
 .text-area {
     margin-top: 90px;
-        margin-left: 24px;
+    margin-left: 24px;
+}
+
+.text-area h1 {
+    margin-bottom: 22px;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: showText 1s;
+    }
+
+.desc{
+
 }
 
 .line{
@@ -26,10 +37,6 @@
     top: -7px;
     opacity: 0.2;
     background-color: rgb(138, 97, 97);
-    }
-
-.text-area h1 {
-    margin-bottom: 22px;
     }
 
 .volume{
@@ -47,26 +54,31 @@
         height: 246px;
         border-radius: 50%;
         position: absolute;
-        top: 0;
-        transition: 1s;
-        animation-name: circleShow 0.05s;
+        animation: circleShow 0.8s;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .circle:nth-child(1){
         background-color: transparent;
-        border: 1px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.3);
         opacity: 0.2;
+        animation-delay: 0s;
+        animation-fill-mode: both;
     }
 
     .circle:nth-child(2){
         background-color: rgb(128, 123, 123);
         left: 100px;
+        animation-delay: 0.2s;
+        animation-fill-mode: both;
     }
 
     .circle:nth-child(3){
         background-color: rgb(49, 49, 49);
         left: 200px;
         transition: 1s;
+        animation-delay: 0.4s;
+        animation-fill-mode: both;
         }
 
     .circle:hover{
@@ -92,4 +104,7 @@
         top: 0;
         right: 24px;
         font-weight: bold;
+        animation: slideDown 0.5s;
+        animation-fill-mode: both;
+        animation-delay: 0.55s;
     }

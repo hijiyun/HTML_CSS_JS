@@ -7,18 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
     <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="animation.css"/>
     <title>No.1</title>
 </head>
 
 <body>
-    <div class="text-area">
+    <div class="text-area stagger-wrapper">
         <h1>
-            <div class="volume">No. 1</div>
-            <div class="title">I`m <div class="line"></div><br/> 
-                jiyun <br/> 
-                hello</div>
+            <div class="volume stagger-item">No. 1</div>
+            <div class="title">
+                <div class="stagger-item">I`m<div class="line"></div></div>
+                <div class="stagger-item">jiyun</div>
+                <div class="stagger-item">hello</div>
+            </div>
         </h1>
-        <p>we`ll make a mobile magazine using html,css only.</p>
+        <p class="desc stagger-item">we`ll make a mobile magazine using html,css only.</p>
     </div>
     <!-- 원 -->
     <div id="circle-wrapper">
