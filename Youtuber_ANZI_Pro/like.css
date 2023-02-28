@@ -1,6 +1,10 @@
 .search{
     margin: 20px;
     position: relative;
+    animation: slideDown 0.7s;
+    animation-delay: 0.25s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .search form{
