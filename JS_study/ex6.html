@@ -5,25 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB</title>
-</head>
-<body>
-    <h1><a href="index.html">WEB</a></h1>
-
-    <input type="button" value="night" onclick=
-    "document.querySelector('body').style.backgroundColor = 'black';
-    document.querySelector('body').style.color = 'white';
-    ">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor = 'white';
-    document.querySelector('body').style.color = 'black';
-    ">
-
-    <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value == 'night'){
+    <script>
+        function nightDayHandler(self){
+            var target = document.querySelector('body');
+    if(self.value == 'night'){
         target.style.backgroundColor = 'black';
         target.style.color = 'white';
-        this.value = 'day';
+        self.value = 'day';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -35,7 +23,7 @@
     }else{
         target.style.backgroundColor = 'white';
         target.style.color = 'black';
-        this.value = 'night';
+        self.value = 'night';
 
         var alist = document.querySelectorAll('a');
         var i = 0;
@@ -43,8 +31,15 @@
         alist[i].style.color = 'red';
         i = i+1
         }
-        
-    }">
+
+    }
+        }
+    </script>
+</head>
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+
+    <input type="button" value="night" onclick="nightDayHandler(this);">
     <ol>
         <li><a href="#">HTML</a></li>
         <li><a href="#">CSS</a></li>
@@ -52,33 +47,6 @@
     </ol>
 
     <h2>JavaScript</h2>
-    <p></p>
-
-    <input type="button" value="night" onclick="
-    var target = document.querySelector('body');
-    if(this.value == 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        this.value = 'day';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i+1
-        }
-
-    }else{
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        this.value = 'night';
-
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-        alist[i].style.color = 'red';
-        i = i+1
-        }
-    }">
+    
 </body>
 </html>
