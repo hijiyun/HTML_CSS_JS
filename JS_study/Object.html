@@ -28,5 +28,15 @@
       document.write(coworks[key]+'<br>');
     }
   </script>
+
+  <h2>Property & Method</h2>
+  <script>
+    coworks.showAll = function(){
+      for(var key in this){
+        document.write(key+':'+this[key]+'<br>');
+      }
+    }
+    coworks.showAll();
+  </script>
 </body>
 </html>
