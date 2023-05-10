@@ -1,4 +1,6 @@
 body{
     background-image: url(https://images.pexels.com/photos/6985001/pexels-photo-6985001.jpeg?cs=srgb&dl=pexels-codioful-%28formerly-gradienta%29-6985001.jpg&fm=jpg);
-    
+    background-size: cover;
+    height: 100vh;
+    display: flex;
 }
