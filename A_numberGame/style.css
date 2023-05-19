@@ -1,0 +1,133 @@
+body{
+    background-image: url("https://img.seoul.co.kr//img/upload/2023/03/27/SSC_20230327135555.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-repeat: no-repeat;
+    }
+.container{
+    width: 700px;
+    height: 450px;
+    border: 10px solid white;
+    border-radius: 20px;
+    text-align: center;
+    background-color: rgba(238, 238, 238, 0.7);
+}
+
+.pre-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sub-title{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-img {
+    width: 20vw;
+    height: 20vh
+  }
+
+  .result-text{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+input{
+    width: 270px;
+    height: 32px;
+    font-size: 15px;
+    border: 0;
+    border-radius: 15px;
+    outline: none;
+    padding-left: 10px;
+    background-color: rgb(233, 233, 233);
+    margin-top: 20px;
+}
+
+.btn-hover {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 11px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+#play-btn{
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+#reset-btn{
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+#result-area{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#chance-area{
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (max-width: 48rem) {
+    .title {
+      font-size: 12vw;
+    }
+    #result-area {
+      font-size: 11vw;
+    }
+    .form-control {
+      font-size: 8vw;
+      max-width: 500px;
+      margin-right: 0px;
+    }
+    .main-img {
+      width: 40vw;
+    }
+    .button-reset {
+      font-size: 5vw;
+      width: 80px;
+      height: 60px;
+    }
+}
