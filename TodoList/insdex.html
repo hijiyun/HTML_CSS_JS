@@ -8,22 +8,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container">
+    <div class="container">
         <h1 class="title">ToDo List</h1>
-        <div class="input-area">
+        <section class="input-area">
             <input type="text">
             <button>+</button>
-        </div>
-    </section>
+        </section>
 
-    <section class="task-area">
-        <div class="task-tabs">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div></div>
-    </section>
+        <section class="task-area">
+            <div class="task-tabs">
+                <div class="under-line"></div>
+                <div>All</div>
+                <div>Done</div>
+                <div>Not Done</div>
+            </div>
+            <div>
+                <div class="task">
+                    <div>go home ~~</div>
+                    <div>
+                        <button class="check-btn">✅</button>
+                        <button class="delete-btn">❌</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="main.js"></script>
