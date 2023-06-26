@@ -13,11 +13,42 @@ body{
 
 .task-area{
     border: 1px solid lightgray;
+    margin-top: 2em;
 }
 
 .task-tabs{
     display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
 }
 .task-tabs div{
     padding: 1em;
+}
+
+.under-line{
+    background-color: pink;
+    height: 4px;
+    position: absolute;
+    width: 80px;
+    top: 50px;
+    left: 0px;
+    padding: 0px;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.check-btn{
+    border: none;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+}
+
+.delete-btn{
+    border: none;
+    background-color: white;
 }
