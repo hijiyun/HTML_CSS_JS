@@ -14,25 +14,27 @@ body{
 .task-area{
     border: 1px solid lightgray;
     margin-top: 2em;
+    position: relative;
 }
 
 .task-tabs{
     display: flex;
     border-bottom: 1px solid lightgray;
-    position: relative;
 }
 .task-tabs div{
     padding: 1em;
+    cursor: pointer;
 }
 
-.under-line{
+#under-line{
     background-color: pink;
-    height: 4px;
+    height: 4px !important;
     position: absolute;
-    width: 80px;
+    width: 48px;
     top: 50px;
     left: 0px;
     padding: 0px;
+    transition: 0.5s;
 }
 
 .task{
