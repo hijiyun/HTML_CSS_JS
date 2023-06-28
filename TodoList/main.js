@@ -32,7 +32,13 @@ function render(){
 
 //Complete가 false 에서 True로 바꾸기
 function toggleComplete(id){
-    console.log("id: ",id)
+    for(let i=0; i<taskList.length; i++){
+        if(taskList[i].id == id){
+            taskList[i].isComplete = true;
+            break;
+        }
+    }
+    console.log(taskList)
 }
 
 //random한 id 만들기 함수
