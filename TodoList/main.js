@@ -87,7 +87,15 @@ function deleteTask(id){
 
 function filter(event){
     mode = event.target.id
-    let filterList = []
+    let filterList = [];
+
+    document.getElementById("under-line").style.width =
+        event.target.offsetWidth + "px";
+    document.getElementById("under-line").style.top =
+        event.target.offsetTop + event.target.offsetHeight + "px";
+    document.getElementById("under-line").style.left =
+        event.target.offsetLeft + "px";
+
     if(mode == "ongoing"){
         for(let i=0; i<taskList.length; i++){
             if(taskList[i].isComplete == false){
