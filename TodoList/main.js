@@ -15,18 +15,28 @@ function addTask(){
     render();
 }
 
-//할일 추가된 task내용들
+//할일 추가된 task내용들을 ui로 보여주기 
 function render(){
     let resultHTML = '';
-    for(let i = 0; i<taskList.length; i++){
-        resultHTML += `<div class="task">
-                            <div>${taskList[i].taskContent}</div>
-                            <div>
-                                <button class="check-btn" onclick="toggleComplete('${taskList[i].id}')">✅</button>
-                                <button class="delete-btn">❌</button>
-                            </div>
+    for(i = 0; i<taskList.length; i++){
+        if(taskList[i].isComplete == true){
+            resultHTML += `<div class="task">
+                                <div class="constent task-done">${taskList[i].taskContent}</div>
+                                <div class="button-box">
+                                    <button class="check-btn" onclick="toggleComplete('${taskList[i].id}')"><i class="fa-solid fa-rotate-left" style="color: #28529a;"></i></button>
+                                    <button class="delete-btn" onclick="deleteTask()"><i class="fa-solid fa-trash" style="color: #e12d2d;"></i></button>
+                                </div>
                         </div>`
-    }
+        }else{
+                resultHTML += `<div class="task">
+                                    <div class="content">${taskList[i].taskContent}</div>
+                                    <div class="button-box">
+                                        <button class="check-btn" onclick="toggleComplete('${taskList[i].id}')"><i class="fa-solid fa-check" style="color: #247a26;"></i></button>
+                                        <button class="delete-btn" onclick="deleteTask()"><i class="fa-solid fa-trash" style="color: #e12d2d;"></i></button>
+                                    </div>
+                                </div>`
+            }
+        }
     document.getElementById("task-board").innerHTML = resultHTML;
 }
 
@@ -34,14 +44,21 @@ function render(){
 function toggleComplete(id){
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].id == id){
-            taskList[i].isComplete = true;
+            taskList[i].isComplete = !taskList[i].isComplete;
+            //!라는 뜻은 not이라는 뜻임 
+            //따라서 false일 때는 true값이 되고 true일 때는 false가 된다.(스위치 같은 느낌)
             break;
         }
     }
+    render()
     console.log(taskList)
 }
 
 //random한 id 만들기 함수
 function randomIdGenerate(){
     return '_' + Math.random().toString(36).substr(2, 9);
+}
+
+function deleteTask(){
+    console.log("삭제")
 }
