@@ -40,17 +40,42 @@ body{
 .task{
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+
+.task-done{
+    text-decoration: line-through;
+    background-color: lightgray;
     padding: 1em;
 }
 
-.check-btn{
-    border: none;
-    background-color: white;
-    width: 30px;
-    height: 30px;
+.button-box{
+    display: flex;
 }
 
-.delete-btn{
+.button-box button{
+    height: 100%;
     border: none;
+    width: 5em;
+    margin: 0;
     background-color: white;
+    transition: 0.5s;
+}
+.button-box button :active{
+    position: relative;
+    top: 2px;
+}
+.button-box button:first-child:hover{
+    background-color: rgb(194, 255, 102);
+}
+.button-box button:nth-child(2):hover{
+    background-color: rgb(251, 133, 133);
+}
+
+.content{
+    padding: 1em;
 }
