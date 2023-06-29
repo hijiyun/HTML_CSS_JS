@@ -1,0 +1,35 @@
+.head-line{
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.menus{
+    margin-top: 1em;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-top: 1px solid lightblue;
+    border-bottom: 4px double lightblue;
+}
+
+.menus button{
+    border: none;
+    padding: 10px;
+    background: none;
+    
+}
+.menus button:hover{
+    background-color: rgb(230, 252, 255);
+}
+
+.news-img-size{
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.news{
+    border-bottom: 2px solid;
+    padding: 15px;
+}
