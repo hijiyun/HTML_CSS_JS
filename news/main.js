@@ -11,10 +11,13 @@ let url;
 
 const getNews = async() => {
     try{
-        let headers = new Headers({'x-api-key':'36REx7vvPskOrjv8186Bt5_HlYAu8Eq5C3IFycIIN5'})
+        // let headers = new Headers({'x-api-key':'36REx7vvPskOrjv8186Bt5_HlYAu8Eq5C3IFycIIN58'})
         let response = await fetch(url, {headers:headers})
         let data = await response.json()
         if(response.status == 200){
+            if(data.total_hits == 0){
+                throw new Error("검색 된 결과값이 없습니다.")
+            }
             news = data.articles
             render();
         }else{
@@ -67,17 +70,9 @@ const render =() => {
 
 const errorRender = (message) => {
     let errorHTML = `
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
-            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-        </symbol>
-    </svg>
-
-    <div class="alert alert-primary d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>        
-        <div>
-        ${message}
-        </div>
+    <div class="alert alert-secondary text-center" role="alert" style="margin: 10px">
+    <i class="fa-solid fa-triangle-exclamation fa-beat" style="color: #1c54b5;"></i>
+        ${message}    
     </div>
     `
     document.getElementById("news-board").innerHTML = errorHTML
