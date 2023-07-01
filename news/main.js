@@ -13,7 +13,7 @@ let url;
 
 const getNews = async() => {
     try{
-        let headers = new Headers({'x-api-key':'22B9GSr4XZ3h-bkT0WGK3fMGuSlnQjJS2wgvIg2kp7g'})
+        // let headers = new Headers({'x-api-key':'22B9GSr4XZ3h-bkT0WGK3fMGuSlnQjJS2wgvIg2kp7g'})
         url.searchParams.set('page',page) // &page=
         console.log(url)
         let response = await fetch(url, {headers:headers})
@@ -97,9 +97,21 @@ const pageNation = async() => {
     first = last - 4
     //first~last 페이지 프린트
 
-    for (let i = first; i < last; i++){
-        pageNationHTML += `<li class="page-item"><a class="page-link" href="#" onclick="moveToPage(${i})">${i}</a></li>`
+    pageNationHTML=`<li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous" onclick="moveToPage(${page-1})">
+            <span aria-hidden="true">&lt;</span>
+        </a>
+    </li>`;
+
+    for (let i = first; i <= last; i++){
+        pageNationHTML += `<li class="page-item ${page == i?"active":""}"><a class="page-link" href="#" onclick="moveToPage(${i})">${i}</a></li>`
     }
+
+    pageNationHTML+=` <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next" onclick="moveToPage(${page+1})">
+            <span aria-hidden="true">&gt;</span>
+        </a>
+    </li>`;
 
     document.querySelector(".pagination").innerHTML=pageNationHTML
 };
