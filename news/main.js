@@ -13,7 +13,7 @@ let url;
 
 const getNews = async() => {
     try{
-        // let headers = new Headers({'x-api-key':'22B9GSr4XZ3h-bkT0WGK3fMGuSlnQjJS2wgvIg2kp7g'})
+        let headers = new Headers({'x-api-key':'22B9GSr4XZ3h-bkT0WGK3fMGuSlnQjJS2wgvIg2kp7g'})
         url.searchParams.set('page',page) // &page=
         console.log(url)
         let response = await fetch(url, {headers:headers})
@@ -37,7 +37,8 @@ const getNews = async() => {
 }
 
 const getLatestNews = async() => {
-    url = new URL(`https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&topic=sport&page_size=10`);
+    page = 1; // 새로운거 search 할 때마다 1로 리셋
+    url = new URL(`https://api.newscatcherapi.com/v2/latest_headlines?countries=KR&page_size=10`);
     getNews();
 };
 
@@ -92,26 +93,41 @@ const pageNation = async() => {
     // page group
     let pageGroup = Math.ceil(page/5)
     //last
-    let last = pageGroup * 5
-    //first
-    first = last - 4
-    //first~last 페이지 프린트
-
-    pageNationHTML=`<li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous" onclick="moveToPage(${page-1})">
-            <span aria-hidden="true">&lt;</span>
-        </a>
-    </li>`;
+    let last = pageGroup * 5;
+    if (last > total_pages){
+    //마지막 그룹이 5개 이하면
+        last = total_pages
+    }
+    let first = last - 4 <= 0 ? 1 : last - 4; // 첫그룹이 5이하이면 
+    if(first >= 6){
+        pageNationHTML=`<li class="page-item" >
+                            <a class="page-link" href="#" aria-label="Previous" onclick="moveToPage(1)">
+                                <span aria-hidden="true">&lt;&lt;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous" onclick="moveToPage(${page-1})">
+                                <span aria-hidden="true">&lt;</span>
+                            </a>
+                        </li>`;
+    }
 
     for (let i = first; i <= last; i++){
         pageNationHTML += `<li class="page-item ${page == i?"active":""}"><a class="page-link" href="#" onclick="moveToPage(${i})">${i}</a></li>`
     }
 
-    pageNationHTML+=` <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next" onclick="moveToPage(${page+1})">
-            <span aria-hidden="true">&gt;</span>
-        </a>
-    </li>`;
+    if(last < total_pages){
+        pageNationHTML+=`<li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next" onclick="moveToPage(${page+1})">
+                                <span aria-hidden="true">&gt;</span>
+                            </a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next" onclick="moveToPage(${total_pages})">
+                                <span aria-hidden="true">&gt;&gt;</span>
+                            </a>
+                        </li>`;
+    }
 
     document.querySelector(".pagination").innerHTML=pageNationHTML
 };
